@@ -1,6 +1,16 @@
-#include <stdio.h>
+#include <GL/glut.h>
 
-int main() {
-	printf("Hello, world!");
+void display() {
+	glClear(GL_COLOR_BUFFER_BIT);
+	glFlush();
+}
+
+int main(int argc, char **argv) {
+	glutInit(&argc, argv);
+
+	glutCreateWindow("Suzume window");
+	glutDisplayFunc(display);
+	glutMainLoop();
+
 	return 0;
 }
