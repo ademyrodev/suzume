@@ -10,7 +10,7 @@ typedef struct {
 } Mat3;
 
 typedef struct {
-    double m[12];
+    double m[16];
 } Mat4;
 
 Vec3 newVec3(double x, double y, double z);
