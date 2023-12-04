@@ -2,8 +2,8 @@
 Reinventing the wheel yet another time with a custom game engine.
 
 # Stuff we've got done so far
-Suzume 0.1.2 can now render a black window, with OpenGL's tremendous help!
+Suzume 0.2 has now a minimal linear algebra module.
 
 # Updates to come
-Next, we'll be implementing a **linear algebra utility library** for 
-Suzume 0.2.  See you then!
+For Suzume 0.3, we'll be implementing **basic input handling** from the 
+keyboard and mouse.
