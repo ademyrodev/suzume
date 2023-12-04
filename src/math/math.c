@@ -30,9 +30,9 @@ Vec3 normalizeVec3(Vec3 v) {
     double vMag = magVec3(v);
 
     Vec3 normalizedVec = {
-        .x = v.x / vMag;
-        .y = v.y / vMag;
-        .z = v.z / vMag;
+        .x = v.x / vMag,
+        .y = v.y / vMag,
+        .z = v.z / vMag,
     };
 
     return normalizedVec;
@@ -68,6 +68,8 @@ Mat3 transMat3(double dx, double dy, double dz) {
     transMat.m[2] = dx;
     transMat.m[5] = dy;
     transMat.m[8] = dz;
+
+    return transMat;
 }
 
 Mat3 rotationMat3X(double theta) {
@@ -133,11 +135,9 @@ Mat4 idMat4() {
 }
 
 double detMat3(Mat3 m) {
-    double mm[9] = m.m;
-
-    return  mm[0] * (mm[4] * mm[8] - mm[5] * mm[7]) -
-            mm[1] * (mm[3] * mm[8] - mm[5] * mm[6]) -
-            mm[2] * (mm[3] * mm[7] - mm[4] * mm[6]);
+    return  m.m[0] * (m.m[4] * m.m[8] - m.m[5] * m.m[7]) -
+            m.m[1] * (m.m[3] * m.m[8] - m.m[5] * m.m[6]) -
+            m.m[2] * (m.m[3] * m.m[7] - m.m[4] * m.m[6]);
 }
 
 double dotProdVec3(Vec3 a, Vec3 b) {
