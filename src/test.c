@@ -1,16 +1,11 @@
 #include <GL/glut.h>
-
-void display() {
-    glClear(GL_COLOR_BUFFER_BIT);
-    glFlush();
-}
+#include "input/input.h"
 
 int main(int argc, char **argv) {
     glutInit(&argc, argv);
+    glutCreateWindow("input handling");
 
-    glutCreateWindow("Suzume window");
-    glutDisplayFunc(display);
+    glutKeyboardFunc(temporaryKbdCallback);
     glutMainLoop();
-
     return 0;
 }
