@@ -1,4 +1,4 @@
-#include "math/math.h"
+#include "algebra.h"
 #include <math.h>
 
 Vec3 newVec3(double x, double y, double z) {

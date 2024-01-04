@@ -5,7 +5,7 @@ SRC := src/
 CC := gcc
 FILES := $(shell find $(SRC) -name '*.c')
 CFLAGS := -Wall -Wextra -pedantic -Werror -Wconversion -Isrc/include/ -o test
-LFLAGS := -lm -lGL -lGLU -lglut
+LFLAGS := -lm -lGL -lGLU -lglfw
 
 debug:
 	@$(CC) $(FILES) $(CFLAGS) -g $(LFLAGS)
